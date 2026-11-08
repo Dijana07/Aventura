@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@import "tailwindcss";
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+
+  /* ========================================= */
+  /* EMERALD THEME */
+  /* ========================================= */
+
+  --color-background-50: #03110c;
+  --color-background-100: #071a13;
+
+  --color-card-background-100: #0f231b;
+  --color-card-background-300: #071a13;
+  --color-title-50: #ffffff;
+  --color-text-100: #d1fae5;
+
+  /* Primary */
+  --color-primary-50: #ecfdf5;
+  --color-primary-100: #d1fae5;
+  --color-primary-200: #a7f3d0;
+  --color-primary-300: #6ee7b7;
+  --color-primary-400: #34d399;
+  --color-primary-500: #10b981;
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-primary-800: #065f46;
+  --color-primary-900: #064e3b;
+  --color-primary-950: #022c22;
+
+  --color-primary-text: #ffffff;
+  --color-neutral-brand-color: #34d399;
+
+  /* Success */
+  --color-success-500: #10b981;
+
+  /* ========================================= */
+  /* BUTTONS */
+  /* ========================================= */
+
+  --color-button-primary-background: #10b981;
+  --color-button-primary-hover-background: #059669;
+  --color-button-primary-text: #ffffff;
+  --color-button-primary-focus-ring: rgba(16, 185, 129, 0.2);
+
+  --color-button-success-background: #10b981;
+  --color-button-success-border: #34d399;
+  --color-button-success-hover-background: #059669;
+  --color-button-success-text: #ffffff;
+  --color-button-success-focus-ring: rgba(16, 185, 129, 0.2);
+
+  --color-button-group-primary-hover-background: #10b981;
+  --color-button-group-primary-text: #10b981;
+
+  /* ========================================= */
+  /* BADGES */
+  /* ========================================= */
+
+  --color-badge-primary-background: #10b98126;
+  --color-badge-primary-text: #34d399;
+  --color-badge-primary-icon-color: #34d399;
+
+  /* ========================================= */
+  /* SIDEBAR */
+  /* ========================================= */
+
+  --color-sidebar-nav-default-text: #d1fae5;
+  --color-sidebar-nav-hover-text: #ecfdf5;
+
+  --color-sidebar-nav-icon: #6ee7b7;
+
+  --color-sidebar-nav-active-text: #34d399;
+  --color-sidebar-nav-active-background: #10b9811f;
+
+  /* ========================================= */
+  /* CHECKBOX */
+  /* ========================================= */
+
+  --color-checkbox-checked-border: #10b981;
+  --color-checkbox-checked-background: #10b981;
+  --color-checkbox-checked-icon-color: #ffffff;
+
+  /* ========================================= */
+  /* INPUTS */
+  /* ========================================= */
+
+  --color-input-primary-focus-border: #34d399;
+
+  /* ========================================= */
+  /* DATEPICKER */
+  /* ========================================= */
+
+  --color-datepicker-selected-background: #10b981;
+
+  /* ========================================= */
+  /* CALENDAR */
+  /* ========================================= */
+
+  --color-calendar-primary-badge: #10b981;
+  --color-calendar-primary-background: #d1fae5;
+
+  /* ========================================= */
+  /* DROPDOWNS */
+  /* ========================================= */
+
+  --color-dropdown-hover-background: #10b98114;
+
+  /* ========================================= */
+  /* TOGGLE */
+  /* ========================================= */
+
+  --color-toggle-active-background: #10b981;
+
+  /* ========================================= */
+  /* CTA / SECTION */
+  /* ========================================= */
+
+  --color-section-title-badge: #10b981;
+  --color-section-title-badge-background: #10b98126;
+
+  --color-pricing-icon-color: #10b981;
+  --color-pricing-icon-background: #10b9811a;
+
+  /* ========================================= */
+  /* ALERTS */
+  /* ========================================= */
+
+  --color-alert-success-icon-background: #10b981;
+  --color-alert-success-title: #10b981;
+  --color-alert-success-description: #10b981;
+  --color-alert-success-button-background: #10b981;
+  --color-alert-success-button-hover-background: #059669;
+
+  /* Shadows */
+  --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-sm: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  --shadow-md:
+    0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  --shadow-lg:
+    0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-xl: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-2xl: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-3xl: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --drop-shadow-theme-3xl: 0 32px 64px rgba(16, 24, 40, 0.14);
+  --popover-shadow: 0px 5px 5px -2px rgba(16, 24, 40, 0.04);
+  --shadow-hero: 0px -14px 100px 0px rgba(0, 0, 0, 0.05);
+
+  --animate-pulse-custom: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.fc {
+  color: white;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.fc-col-header-cell {
+  background: #011c17;
+}
+
+.fc-timegrid-slot {
+  background: #01231d;
+}
+
+.fc-timegrid-axis {
+  background: #011c17;
+}
+
+.fc-toolbar-title {
+  color: white;
+}
+
+.fc-button {
+  background: #15803d !important;
+  border: none !important;
+}
+
+.fc-button:hover {
+  background: #166534 !important;
+}
+
+.fc-event {
+  border: none !important;
+  border-radius: 8px;
+  padding: 2px;
+}

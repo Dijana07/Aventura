@@ -1,0 +1,18 @@
+.vs/
+bin/
+obj/
+
+# user-specific
+*.user
+*.suo
+
+# packages
+packages/
+
+# logs
+*.log
+
+pkg/
+
+appsettings.json
+appsettings.Development.json
